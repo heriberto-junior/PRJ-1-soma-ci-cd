@@ -30,6 +30,9 @@ jobs:
       - name: Compile COBOL to C
         run: cobc -Wall -C -fno-math -fno-arith "03_Add2.cob" -o soma.c
 
+      - name: Remove gmp.h include
+        run: sed -i 's/#include <gmp.h>//' soma.c
+        
       - name: Compile C to WebAssembly
         run: |
           source emsdk/emsdk_env.sh
