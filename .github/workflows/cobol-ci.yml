@@ -1,29 +1,29 @@
 
-name: Run COBOL Program
+name: Run COBOL Program (from main, building master)
 
 on:
-  push:
-    branches: [ master ]
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
+      - name: Checkout master branch
         uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: List files (diagnóstico)
+        run: ls -R
 
       - name: Install GnuCOBOL
         run: |
           sudo apt-get update
           sudo apt-get install -y gnucobol
 
-      - name: List files
-        run: ls -R
-
       - name: Compile COBOL program
-        run: cobc -x "projeto1-hello-world-cobol/02_Add.cob" -o "02_Add"
+        # Se o arquivo está na raiz da master:
+        run: cobc -x "02_Add.cob" -o "02_Add"
 
       - name: Execute COBOL program
         run: ./02_Add
