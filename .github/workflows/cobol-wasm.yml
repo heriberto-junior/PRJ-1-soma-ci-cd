@@ -26,7 +26,7 @@ jobs:
           echo "EMSDK=$PWD" >> $GITHUB_ENV
 
       - name: Compile COBOL to C
-        run: cobc -Wall -C SOMA-WASM.cob -o soma.c
+        run: cobc -Wall -C projeto1-hello-world-cobol/03_Add2.cob -o soma.c
 
       - name: Compile C to WebAssembly
         run: |
