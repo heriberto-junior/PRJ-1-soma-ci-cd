@@ -5,8 +5,8 @@ Nesse projeto inicial o Cobol foi criado na para interagir com o YAML via Github
 Nele existem dois campos para interação que são utilizados para fazer a soma de ambos.
 O projeto está composto da seguinte forma:
 
-- O Cobol está localizado em: projeto1-soma-ci-cd/src/soma.cob
-- O YAML está localizado em: projeto1-soma-ci-cd/.github/workflows/cobol-pipeline.yml
+- O Cobol está localizado na branch main em: projeto1-soma-ci-cd/src/soma.cob
+- O YAML está localizado na branch main em: projeto1-soma-ci-cd/.github/workflows/cobol-pipeline.yml
 
 Para executar é necessário:
 
@@ -24,3 +24,5 @@ O programa vai:
 - Instalar o Cobol GNU (converte o fonte Cobol em C);
 - Compilar o Cobol;
 - Executar o Cobol que somará os valores e trará o resultado para o YAML.
+
+Além disso, foi utilizada a branch Master e a branch Staging para testes iniciais, na qual eu deixei permanecer como logs.
