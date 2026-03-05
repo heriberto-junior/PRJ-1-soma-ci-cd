@@ -1,4 +1,4 @@
-# projeto1-soma-ci-cd
+# Projeto para somar 2 valores via Cobol com CI/CD via YAML
 Primeiro teste usando o github e criando codificação Cobol
 
 Nesse projeto inicial o Cobol foi criado na para interagir com o YAML via Github Actions.
